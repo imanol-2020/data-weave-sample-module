@@ -7,7 +7,7 @@
 
     <groupId>721a4a78-a1ca-4405-99cf-17cd285ebe57</groupId>
     <artifactId>string-utils-weave-module</artifactId>
-    <version>1.0.7</version>
+    <version>1.0.8</version>
 
     <description>This example shows how to deploy a DataWeave Component</description>
 

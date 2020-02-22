@@ -59,20 +59,27 @@ If it fails, the most common problem is that you have to change the version of t
 4. After you run in and get the build success message, you get the last line of the console that says "Uploaded to (your distribution management repository id)".
 You open the link in an explorer and you will need the metadata for the next step.
 
-In your pom.xml add this 
+#### Steps to add the library to a project
+
+1. In your pom.xml add this. You get the next info from the metadata link.
 ```xml
 <dependency>
-     <groupId>142ebe1a-6e25-4670-9220-0cdce791f1b8</groupId>
-     <artifactId>string-utils-weave-module</artifactId>
-     <version>1.0.0-SNAPSHOT</version>
+     <groupId>(the one that appears in the metadata as groupId)</groupId>
+     <artifactId>(the one that appears in the metadata as artifactId)</artifactId>
+     <version>(you can choose any version from the versions markup)</version>
 </dependency>
 ```
+
+2. You need to add a new repository in the pom.xml file:
 ```xml
- <repository>
-    <id>exchange</id>
-    <name>Exchange</name>
-    <url>https://maven.anypoint.mulesoft.com/api/v1/organizations/142ebe1a-6e25-4670-9220-0cdce791f1b8/maven</url>
+<repository>
+ 	(here you put the same info as the distribution management markup in your library)
 </repository>
+```
+
+3. Then in the console, on the folder of the project, you run the next command in order to download and install your library:
+```terminal
+mvn clean install
 ```
 
 And then you can reference it 
