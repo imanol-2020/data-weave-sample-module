@@ -7,7 +7,7 @@
 
     <groupId>721a4a78-a1ca-4405-99cf-17cd285ebe57</groupId>
     <artifactId>string-utils-weave-module</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.7</version>
 
     <description>This example shows how to deploy a DataWeave Component</description>
 
@@ -48,8 +48,6 @@
                 <version>2.1.3</version>
                 <configuration>
                     <logForkedProcessCommand>true</logForkedProcessCommand>
-                    <applicationName>weave-maven-plugin</applicationName>
-                    <classifier>mule-application</classifier>
                 </configuration>
                 <executions>
                     <execution>
@@ -76,7 +74,7 @@
           <repository>
             <id>anypoint-exchange</id>
             <name>Anypoint Exchange</name>
-            <url>https://maven.anypoint.mulesoft.com/api/v1/maven</url>
+            <url>https://maven.anypoint.mulesoft.com/api/v2/maven</url>
             <layout>default</layout>
         </repository>
         <repository>
